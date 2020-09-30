@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ESP32 - Compile",
+            "type": "shell",
+            "command": ".\\arduino-cli.exe compile --verify --port COM3 --fqbn esp32:esp32:nodemcu-32s app",
+            "group": "build",
+            "isBackground":false,
+            "presentation":{
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "ESP32 - Upload",
+            "type": "shell",
+            "command":".\\arduino-cli.exe compile --upload --port COM3 --fqbn esp32:esp32:nodemcu-32s app",
+            "group": "build",
+            "isBackground":false,
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}

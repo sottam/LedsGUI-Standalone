@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "forward_list": "cpp",
+        "list": "cpp",
+        "xmemory": "cpp",
+        "*.tcc": "cpp",
+        "slist": "cpp"
+    },
+    "search.exclude": {
+        "**/Arduino": true
+    },
+    "C_Cpp.default.includePath": ["app/", "${default}", "**/Arduino" ]
+}

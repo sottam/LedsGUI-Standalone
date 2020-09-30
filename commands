@@ -1,0 +1,13 @@
+
+
+.\arduino-cli.exe core install esp32:esp32
+
+//verify command
+.\arduino-cli.exe compile --verify --fqbn esp32:esp32:nodemcu-32s app
+
+//upload command
+.\arduino-cli.exe compile --upload --port COM3 --fqbn esp32:esp32:nodemcu-32s app
+
+// Get configurations
+.\arduino-cli.exe config dump --verbose
+
