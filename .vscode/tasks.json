@@ -19,9 +19,39 @@
             "problemMatcher": []
         },
         {
-            "label": "ESP32 - Upload",
+            "label": "ESP32 - Compile and Serial Upload",
             "type": "shell",
             "command":".\\arduino-cli.exe compile --upload --port COM3 --fqbn esp32:esp32:nodemcu-32s app",
+            "group": "build",
+            "isBackground":false,
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "ESP32 - Serial Upload",
+            "type": "shell",
+            "command":".\\arduino-cli.exe upload --port COM3 --fqbn esp32:esp32:nodemcu-32s app",
+            "group": "build",
+            "isBackground":false,
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "ESP32 - OTA Upload",
+            "type": "shell",
+            "command":".\\Arduino\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\tools\\espota.exe -i 192.168.0.117 -p 3232 -f .\\app\\build\\esp32.esp32.nodemcu-32s\\app.ino.bin",
             "group": "build",
             "isBackground":false,
             "presentation": {
